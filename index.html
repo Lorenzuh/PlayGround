@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Oblituos FM — uma rádio pirata no fim do mundo. Uma aventura narrativa sobre o que merece ser lembrado.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23101114' stroke='%23d4fc65' stroke-width='2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='sans-serif' font-size='34' fill='%23d4fc65'%3EO%3C/text%3E%3C/svg%3E">
+  <title>99.9 Oblituos FM — Última transmissão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main id="app" class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Oblituos FM"><span class="brand-mark">O<span>·</span></span><span class="brand-copy">OBLITUOS <small>FM</small></span></a>
+      <div class="frequency"><span class="live-dot"></span><span>NO AR</span><strong>99.9</strong><small>MHz</small></div>
+      <button class="icon-button" id="sound-toggle" aria-label="Alternar efeitos sonoros" title="Efeitos sonoros">♫</button>
+    </header>
+    <section class="game-layout">
+      <aside class="rail" aria-label="Status da transmissão">
+        <div class="rail-top"><span class="eyebrow">NOITE <b id="night-number">01</b> / 03</span><div class="night-progress"><i id="night-progress"></i></div></div>
+        <div class="phase-list" id="phase-list"></div>
+        <div class="rail-bottom"><div class="server-status"><span class="server-light"></span><div><span class="eyebrow">SERVIDOR</span><strong id="server-state">INSTÁVEL</strong></div></div><div class="rail-note">BIOTECHNICA<br><span>MEMORY DIVISION · 2077</span></div></div>
+      </aside>
+      <section class="stage-wrap">
+        <div class="stage-meta"><span class="eyebrow" id="stage-kicker">ARQUIVO DE ÁUDIO · 001</span><span class="mono" id="clock">02:17 AM</span></div>
+        <div class="stage" id="stage" aria-live="polite"></div>
+        <footer class="stage-footer"><span><i class="footer-dot"></i> <span id="footer-message">UMA FREQUÊNCIA PARA QUEM AINDA ESTÁ AÍ.</span></span><span class="mono">ECHO / 99.9 FM</span></footer>
+      </section>
+      <aside class="dashboard" aria-label="Indicadores da rádio">
+        <div class="dash-heading"><span class="eyebrow">PAINEL DE SINAL</span><span class="status-pill" id="air-status">STANDBY</span></div>
+        <div class="meter-card signal-card"><div class="meter-label"><span>SINAL</span><strong id="signal-value">32</strong></div><div class="meter-track"><i id="signal-meter"></i></div><p>alcance da transmissão</p></div>
+        <div class="meter-card resonance-card"><div class="meter-label"><span>RESSONÂNCIA</span><strong id="resonance-value">24</strong></div><div class="meter-track"><i id="resonance-meter"></i></div><p>vozes que ficaram</p></div>
+        <div class="listeners-card"><div class="listener-head"><span class="eyebrow">SINTONIZADOS</span><span class="signal-bars"><i></i><i></i><i></i><i></i><i></i></span></div><strong id="listeners-value">1,204</strong><small>ouvintes agora</small><div class="listener-divider"></div><div class="little-stat"><span>ENERGIA</span><b id="energy-value">78%</b></div></div>
+        <div class="memory-widget"><div class="memory-icon">✳</div><div><span class="eyebrow">NO BOLSO DE ECHO</span><strong id="memory-count">0 lembranças</strong></div></div>
+        <button class="save-button" id="save-button" title="Progresso salvo automaticamente"><span>●</span> SALVO LOCALMENTE</button>
+      </aside>
+    </section>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
