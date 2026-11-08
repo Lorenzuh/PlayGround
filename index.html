@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#120a12" />
+  <link rel="icon" href="data:," />
+  <meta name="description" content="Poeira & Chumbo — um duelo de pixels no velho oeste. Feito para jogar com o polegar." />
+  <title>Poeira &amp; Chumbo — Duelo de Pixels</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <div class="glow"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main class="stage">
+    <div class="cabinet">
+      <canvas id="game" width="320" height="568" aria-label="Jogo de faroeste em pixel art. Toque nos bandidos para atirar."></canvas>
+    </div>
+    <p class="desk-hint">P PAUSAR &nbsp;·&nbsp; R RECARREGAR &nbsp;·&nbsp; E OLHO DE FALCAO</p>
+  </main>
+
+  <noscript>Ative o JavaScript para jogar Poeira &amp; Chumbo.</noscript>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
